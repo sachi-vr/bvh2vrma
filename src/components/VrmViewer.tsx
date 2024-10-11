@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { Viewer } from '@/features/vrmViewer/viewer';
 import AvatarSample_A from '../assets/AvatarSample_A.vrm';
+import ShapellFuku5 from '../assets/shapellFuku5.vrm';
 import { IconButton } from '@charcoal-ui/react';
 import '@/icons';
 import { useAnimationFrame } from '@/utils/useAnimationFrame';
@@ -21,7 +22,7 @@ export default function VrmViewer(props: VRMViewerProps) {
     async (canvas: HTMLCanvasElement) => {
       if (canvas) {
         viewer.setup(canvas);
-        await viewer.loadVrm(AvatarSample_A);
+        await viewer.loadVrm(ShapellFuku5);
         setLoadFlag(true);
       }
     },
